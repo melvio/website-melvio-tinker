@@ -9,3 +9,6 @@ activate:
 
 pipinstall:
 	python3 -m pip install -r requirements.txt
+
+runserver:
+	python3 melvio/manage.py runserver
