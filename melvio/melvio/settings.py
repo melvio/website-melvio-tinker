@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import socket
 import yaml
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,7 +23,6 @@ with open(BASE_DIR.parent / 'development.yaml') as config_file:
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# Development key:
 SECRET_KEY = config['secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
