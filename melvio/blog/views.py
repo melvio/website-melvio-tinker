@@ -19,7 +19,8 @@ posts = [
 
 # view on homepage of the blog
 def home(request):
-    context = {'posts': posts}
+    context = {'posts': posts,
+               'title': 'hi'}
     return render(request=request,
                   template_name='blog/home.html',
                   context=context)
