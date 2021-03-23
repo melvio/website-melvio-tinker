@@ -11,21 +11,26 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import socket
+import yaml
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+with open(BASE_DIR.parent / 'development.yaml') as config_file:
+    config = yaml.safe_load(config_file)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Development key:
-SECRET_KEY = 'fut(ok&25q0k+t&r&1z_v&lj0s(tyx-uhpc6!fl@n5^3xy7h+1'
+SECRET_KEY = config['secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config["debug"]
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.melv.io', 'localhost', '127.0.0.1']
 
 # Application definition
 
