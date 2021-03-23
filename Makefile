@@ -12,3 +12,8 @@ pipinstall:
 
 runserver:
 	python3 melvio/manage.py runserver
+
+
+migrations:
+	python3 melvio/manage.py makemigrations \
+	&& python3 melvio/manage.py migrate
