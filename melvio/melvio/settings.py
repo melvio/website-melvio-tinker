@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from pathlib import Path
+import os
 import yaml
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +29,7 @@ SECRET_KEY = config['secret_key']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config["debug"]
 
-ALLOWED_HOSTS = ['www.melv.io', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['www.melv.io', 'localhost', '127.0.0.1', '3.122.238.171', 'ec2-3-122-238-171.eu-central-1.compute.amazonaws.com']
 
 # Application definition
 
@@ -116,4 +117,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
