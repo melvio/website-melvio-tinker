@@ -17,3 +17,4 @@ runserver:
 migrations:
 	python3 melvio/manage.py makemigrations \
 	&& python3 melvio/manage.py migrate
+

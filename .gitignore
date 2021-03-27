@@ -177,7 +177,7 @@ cython_debug/
 out
 gen
 
-development.yaml
+production.yaml
 
 
 
