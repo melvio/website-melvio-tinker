@@ -20,3 +20,7 @@ migrations:
 
 gunicorn:
 	cd melvio && gunicorn --bind localhost:8000 melvio.wsgi:application
+
+uwsgi:
+	cd melvio && uwsgi --http :8000 --module melvio.wsgi
+
