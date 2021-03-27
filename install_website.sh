@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
 sudo apt-get update
-sudo apt-get install python
-sudo apt-get install python3-pip
-sudo apt-get install virtualenv
+sudo apt-get install -y python python3-pip virtualenv git
 
-sudo apt-get install git
 git clone https://github.com/melvio/website-melvio.git
 cd website-melvio/ || exit 1
 
