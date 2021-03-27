@@ -1,6 +1,6 @@
 
 venv:
-	python3 -m virtualenv venv
+	python3 -m venv venv
 
 # This does not work because `make` itself is a separate command.
 activate:
