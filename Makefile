@@ -18,3 +18,5 @@ migrations:
 	python3 melvio/manage.py makemigrations \
 	&& python3 melvio/manage.py migrate
 
+gunicorn:
+	cd melvio && gunicorn --bind localhost:8000 melvio.wsgi:application
