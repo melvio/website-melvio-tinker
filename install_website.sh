@@ -5,12 +5,12 @@
 
 sudo apt-get update  -y
 sudo apt-get upgrade -y
-sudo apt-get install -y python python3-pip virtualenv
-sudo apt-get install -y git nginx-full
+sudo apt-get install -y python python3-pip python3-venv
+sudo apt-get install -y git nginx-full ufw
 
 
 if [[ ! -d venv/ ]] ; then
-  python3 -m virtualenv venv
+  python3 -m venv venv
 fi
 source ./venv/bin/activate
 
