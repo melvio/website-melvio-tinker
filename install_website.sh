@@ -6,7 +6,9 @@
 sudo apt-get update  -y
 sudo apt-get upgrade -y
 sudo apt-get install -y python python3-pip python3-venv
-sudo apt-get install -y git nginx-full ufw
+sudo apt-get install -y git nginx-full ufw 
+sudo apt-get install -y apache2 apache2-mod-wsgi-py3
+
 
 
 if [[ ! -d venv/ ]] ; then

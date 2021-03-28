@@ -15,15 +15,15 @@ runserver:
 
 
 migrations:
-	python3 melvio/manage.py makemigrations \
-	&& python3 melvio/manage.py migrate
+	python3    application/manage.py makemigrations \
+	&& python3 application/manage.py migrate
 
 
 collectstatic:
-	python3 melvio/manage.py collectstatic
+	python3 application/manage.py collectstatic
 
 gunicorn:
-	cd melvio && gunicorn --bind localhost:8000 melvio.wsgi:application
+	cd application && gunicorn --bind localhost:8000 melvio.wsgi:application
 
 uwsgi:
-	cd melvio && uwsgi --http :8000 --module melvio.wsgi
+	cd application && uwsgi --http :8000 --module melvio.wsgi
